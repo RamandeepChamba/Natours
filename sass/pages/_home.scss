@@ -1,0 +1,107 @@
+.section-about {
+    
+    padding: 25rem 0;
+    background-color: $color-grey-light-1;
+    margin-top: -20vh;
+    
+
+    @include respond(phone) {
+        padding: 24rem 0 22rem 0;
+    }
+}
+
+.section-features {
+    
+	padding: 20rem 0;
+    
+    
+	background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url("img/nat-4-small.jpg");
+
+    @include res-img {
+        background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url("img/nat-4.jpg");
+    }
+    background-size: cover;
+    background-position: center;
+    margin-top: -10rem;
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-tour {
+    
+    padding: 25rem 0 15rem 0;
+    background-color: $color-grey-light-1;
+    margin-top: -10rem;
+
+    @include respond(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
+}
+
+.section-stories {
+
+    position: relative;
+    padding: 15rem 0;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-book {
+
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    padding: 15rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.book {
+
+    background-image: linear-gradient(105deg, rgba($color-white, .8) 0%, 
+                            rgba($color-white, .8) 50%,
+                            transparent 50%), 
+                        url('img/nat-10-small.jpg');
+    background-size: cover;
+    padding: 6rem;
+    // height: 50rem; Just for testing
+    border-radius: 3px;
+    box-shadow: 0 1.4rem 4rem rgba($color-black, .2);
+    
+    @include res-img {
+        background-image: linear-gradient(105deg, rgba($color-white, .8) 0%, 
+                            rgba($color-white, .8) 50%,
+                            transparent 50%), 
+                        url('img/nat-10.jpg');
+    }
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(105deg, rgba($color-white, .8) 0%, 
+                            rgba($color-white, .8) 65%,
+                            transparent 65%), 
+                        url('img/nat-10.jpg');
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right, rgba($color-white, .8) 0%, 
+                            rgba($color-white, .8) 100%),
+                        url('img/nat-10.jpg');
+    }
+
+}

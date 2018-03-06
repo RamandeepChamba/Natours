@@ -1,0 +1,87 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey;
+}
+
+.btn-text {
+  font-family: "custom--regular", Arial, sans-serif;
+}
+
+.header-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: 400;
+  backface-visibility: hidden; // prevents flickering in animations
+  &--main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 3rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: $default-font-size;
+    letter-spacing: 1.2rem;
+    margin-bottom: 6rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    @include respond(phone) {
+      letter-spacing: .4rem;
+    }
+  }
+}
+
+.header-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: $color-primary;
+  transition: all 0.2s;
+  @supports(-webkit-background-clip: text) or (background-clip: text) {
+    color: transparent;
+    background-image: linear-gradient( to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.header-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  font-weight: 500;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
