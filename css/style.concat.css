@@ -1183,11 +1183,11 @@ body {
     overflow: hidden;
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
-    @supports (shape-outside: polygon()) or (-webkit-shape-outside: polygon()) {
+    @supports (shape-outside: circle()) or (-webkit-shape-outside: circle()) {
       .story__shape {
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%); } }
-    @supports (clip-path: polygon()) or (-webkit-clip-path: polygon()) {
+    @supports (clip-path: circle()) or (-webkit-clip-path: circle()) {
       .story__shape {
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
